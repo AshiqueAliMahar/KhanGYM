@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        #sidebar{
+            background-color: silver;
+            width: 300px;
+            font-family: Monaco;
+            overflow: auto;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0px;
+        }
+        ul li{
+            border-bottom: 1px solid black;
+        }
+        #sidebar ul li:hover{
+            background-color: darkred;
+            color:white;
+            font-size: 18px;
+        }
+        .font-weight-bold{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#exercise">Exercise</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" style="border: none">
+
+                <li class="nav-item" style="border: none">
+                    <a class="nav-link" href="#dietPlan">Diet plan</a>
+                </li>
+                <li class="nav-item" style="border: none">
+                    <a class="nav-link" href="Workout-plan.html">Workout Plan</a>
+                </li>
+                <li class="nav-item" style="border: none">
+                    <a class="nav-link" href="#" onclick="changepic('About/about-dk.png','pic')">About</a>
+                </li>
+                <li class="nav-item" style="border:none">
+                    <a class="nav-link" href="logOut.action">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+        <div align="right">Logged In as:</div>
+    </nav>
+    <div class="row">
+        <div id="sidebar" style="border-right: 5px solid darkblue" class="col-4">
+            <ul class="p-0">
+                <li class="text-center h3" id="exercise"> <b>Exercises</b></li>
+                <li class="font-weight-bold">Biceps</li>
+                <ul>
+                    <li onclick='changepic("Biceps/bicep-curls.gif","pic","","desc")'>Biceps Curls</li>
+                    <li onclick='changepic("Biceps/cable-curls.gif","pic")'>Cable Curls</li>
+                    <li onclick='changepic("Biceps/preacher-curls.gif","pic")'>Preacher Curls</li>
+                    <li onclick='changepic("Biceps/concentration-curls.gif","pic")'>Concentration Curls</li>
+                    <li onclick='changepic("Biceps/dumbbell-curls.gif","pic")'>Dumbell Curls</li>
+                </ul>
+                <li class="font-weight-bold">Chest</li>
+                <ul>
+                    <li onclick="changepic('Chest/c.gif','pic')">Decline Bench Press</li>
+                    <li onclick="changepic('Chest/c1.gif','pic')">Flat Bench Press</li>
+                    <li onclick="changepic('Chest/c2.gif','pic')">Dumbbell Fly</li>
+                    <li onclick="changepic('Chest/c3.png','pic')">Incline Dumbell Fly</li>
+                    <li onclick="changepic('Chest/c4.png','pic')">Push-Ups</li>
+                    <li onclick="changepic('Chest/c5.gif','pic')">Push-Over</li>
+                </ul>
+                <li class="font-weight-bold">Shoulders</li>
+                <ul>
+                    <li onclick="changepic('shoulder/barbell-military-press.gif','pic')">Barbell-Millitary-Press</li>
+                    <li onclick="changepic('shoulder/cable-front-raises.gif','pic')">Cable-Front-Raises</li>
+                    <li onclick="changepic('shoulder/dumbbell-lateral-raise.gif','pic')">Dumbbel-Lateral-Raise</li>
+                    <li onclick="changepic('shoulder/seated-dumbbell-press.gif','pic')">Seated-Dumbbel-Press</li>
+                    <li onclick="changepic('shoulder/seated-machine-press.gif','pic')">Seated-Machine-Press</li>
+                    <li onclick="changepic('shoulder/upright-row-barbell.gif','pic')">Upright-Row-Barbell</li>
+                </ul>
+                <li class="font-weight-bold">Triceps</li>
+                <ul>
+                    <li onclick="changepic('Triceps/close-grip-bench-press.gif','pic')">Close-Grip-Bench-Press</li>
+                    <li onclick="changepic('Triceps/machine-tricep-extensions.gif','pic')">Machine-Tricep-Extensions</li>
+                    <li onclick="changepic('Triceps/standing-barbell-tricep-extensions.gif','pic')">Standing-Barbell-Tricep-Extensions</li>
+                    <li onclick="changepic('Triceps/standing-dumbbell-tricep-extension.gif','pic')">Standing-Dumbbell-Tricep-Extensions</li>
+                    <li onclick="changepic('Triceps/tricep-extensions-cable.gif','pic')">Tricep-Extensions-Cable</li>
+                    <li onclick="changepic('Triceps/tricep-kickbacks.gif','pic')">Tricep-Kickbacks</li>
+                </ul>
+                <li class="font-weight-bold">Wings</li>
+                <ul>
+                    <li onclick="changepic('Wings/mlpd.gif','pic')">Machine-Lat-Pulldowns</li>
+                    <li onclick="changepic('Wings/oabor.gif','pic')">One-Arm-Bent-Over-Rows</li>
+                    <li onclick="changepic('Wings/tbr.gif','pic')">T-Bar-Rows</li>
+                    <li onclick="changepic('Wings/wgpups.gif','pic')">Wide-Grip-Pullups</li>
+                    <li onclick="changepic('Wings/bor.gif','pic')">Bent-Over-Row</li>
+                </ul>
+                <li class="font-weight-bold">Abs</li>
+                <ul>
+                    <li onclick="changepic('ABS/tc.gif','pic')">Twist-Crunch</li>
+                    <li onclick="changepic('ABS/su.gif','pic')">Sit-Ups</li>
+                    <li onclick="changepic('ABS/knc.gif','pic')">Kneeling-Cable-Crunches</li>
+                    <li onclick="changepic('ABS/dsb.gif','pic')">Dumbbell-Side-Bends</li>
+                    <li onclick="changepic('ABS/hll.gif','pic')">Hanging-Leg-Lifts</li>
+                </ul>
+                <li class="font-weight-bold" onclick="changepic('Thighs/alt.jpg','pic')">Legs</li>
+                <ul>
+                    <li onclick="changepic('Thighs/bd.gif','pic')">Barbell-Deadlifts</li>
+                    <li onclick="changepic('Thighs/bs.gif','pic')">Barbell-Squats</li>
+                    <li onclick="changepic('Thighs/cs.gif','pic')">Cable-Squats</li>
+                    <li onclick="changepic('Thighs/ds.gif','pic')">Dumbbell-Squats</li>
+                    <li onclick="changepic('Thighs/le.gif','pic')">Leg-Extensions</li>
+                </ul>
+                <li class="font-weight-bold" id="dietPlan" onclick="changepic('DietPlan/dp.jpg','pic')">Diet Plan</li>
+                <ul>
+                    <li onclick="changepic('DietPlan/D1.png','pic')">Muscle Gain For Man</li>
+                    <li onclick="changepic('DietPlan/D2.png','pic')">Fat Loss For Man</li>
+                    <li onclick="changepic('DietPlan/D3.png','pic')">Muscle Gain For Woman</li>
+                    <li onclick="changepic('DietPlan/D4.png','pic')">Fat Loss For Woman</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="col-8" >
+            <img src="Images/Biceps-Workout.jpg" class="img-thumbnail img-fluid d-block float-left" id="pic">
+            <img src="Images/Biceps-Workout.jpg" class="img-thumbnail img-fluid d-block " id="desc">
+        </div>
+    </div>
+</div>
+
+<script>
+    function changepic(srcName,id){
+        document.getElementById(id).src=srcName;
+    }
+    function changepic(srcName,id,srcDesc,descId){
+        document.getElementById(id).src=srcName;
+        document.getElementById(descId).src=srcDesc;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			background-image: url("signup/lazarSignUp.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+
+
+
+        <div>
+    	<form action="signup" class="w-50  h-100 m-auto p-5" style="border-radius: 20px;background-color: rgba(0,0,0,0.0);color: white;outline: none;">
+
+            <h1 class="h1 text-center m-1" style="font-family: calibri;color:silver;">Sign Up</h1>
+            <label class="custom-control-label mt-2 bg-transparent">Name</label>
+            <input type="text" class="form-control mb-2" placeholder="Name" required="required" name="name">
+            <label class="custom-control-label">CNIC</label>
+            <input type="text" class="form-control mb-2" placeholder="CNIC" required="required" name="cnic">
+            <label class="custom-control-label">Email</label>
+            <input type="email" class="form-control mb-2" placeholder="Email" required="required" name="email" style="border:borderless">
+            <label class="custom-control-label">Password</label>
+            <input type="password" class="form-control mb-2" placeholder="Password" required="required" name="password">
+
+            <label class="custom-control-label">Date Of Birth</label>
+            <input type="date" class="form-control mb-2" placeholder="Date Of Birth" required="required" name="dob">
+            <label class="custom-control-label">Father's Name</label>
+            <input type="text" class="form-control mb-2" placeholder="Father's Name" required="required" name="fName">
+            <label class="custom-control-label">Contact No</label>
+            <input type="number" class="form-control mb-2" placeholder="Contact" required="required" name="contact">
+
+            <input type="radio" class=" custom-radio" name="gender" value="male" checked="checked"> Male
+	   		<input type="radio" class="custom-radio" name="gender" value="female"> Female
+            <input type="radio" class="custom-radio" name="gender" value="other"> Other
+            <button class="btn btn-block btn-light mt-2">Sign Up</button>
+    	</form>
+        </div>
+</div>
+</body>
+</html>

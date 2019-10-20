@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Biceps</title>
+</head>
+
+<body>
+    <table border="5" width="800px" height="630px" align="center" bgcolor="#CCCCCC"> 
+    <tr>
+    	<td align="center"><b>Exercises</b></td>
+    	<td align="center" rowspan="6"><img src="../arnold-schwarzenegger-biceps_0.jpg" id="pic"></td>
+    </tr>
+    <tr>
+    	<th><input type="button" onClick="changepic()" value="Biceps curls">
+    
+    </th>
+    </tr>
+    <tr>
+    	<th><input type="button" onClick="changepic1()" value="Cable curls">
+    
+    </th>
+    </tr>
+    <tr>
+    	<th><input type="button" onClick="changepic2()" value="Preacher curls">
+    
+    </th>
+    </tr>
+    
+    <tr>
+    	<th><input type="button" onClick="changepic3()" value="Concentration curls">
+    
+    </th>
+    </tr>
+    <tr>
+    <th><input type="button" onClick="changepic4()" value="Dumbell curls"></th>
+    </tr>
+    </table>
+    <script>
+	function changepic(){
+		document.getElementById("pic").src='bicep-curls.gif';
+		}
+		function changepic1(){
+			document.getElementById("pic").src='cable-curls.gif';
+			}
+			function changepic2(){
+		document.getElementById("pic").src='preacher-curls.gif';
+		}
+		function changepic3(){
+		document.getElementById("pic").src='concentration-curls.gif';
+		}
+		function changepic4(){
+		document.getElementById("pic").src='dumbbell-curls.gif';
+		}
+	</script>
+</body>
+</html>
